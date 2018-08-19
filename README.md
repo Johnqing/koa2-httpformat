@@ -1,6 +1,6 @@
 # koa2-httpformat
 koa2 http格式化
-```
+```javascript
 const koa = require('koa');
 const app = new koa();
 const router = require('koa-router')();
