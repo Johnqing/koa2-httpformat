@@ -6,10 +6,9 @@ const app = new koa();
 const router = require('koa-router')();
 const httpFormat = require('koa2-httpformat');
 const log = async function(ctx, next){
-		await next();
+    await next();
     const formatLog = httpFormat(ctx, ':remote-addr|:url|:req[cookies]|:referrer|:user-agent');
     console.log(formatLog);
-	}
 }
 
 app.use(log);
